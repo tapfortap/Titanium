@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		24416B8111C4CA220047AFDD /* Build & Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */;
+			buildPhases = (
+				24416B8011C4CA220047AFDD /* ShellScript */,
+			);
+			dependencies = (
+				24416B8511C4CA280047AFDD /* PBXTargetDependency */,
+			);
+			name = "Build & Test";
+			productName = "Build & test";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		24DD6CF91134B3F500162E58 /* ComTapfortapTiModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* ComTapfortapTiModule.h */; };
+		24DD6CFA1134B3F500162E58 /* ComTapfortapTiModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComTapfortapTiModule.m */; };
+		24DE9E1111C5FE74003F90F6 /* ComTapfortapTiModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* ComTapfortapTiModuleAssets.h */; };
+		24DE9E1211C5FE74003F90F6 /* ComTapfortapTiModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComTapfortapTiModuleAssets.m */; };
+		4AB629251697C29300EF91B0 /* ComTapfortapTiAdView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB6291B1697C29300EF91B0 /* ComTapfortapTiAdView.h */; };
+		4AB629261697C29300EF91B0 /* ComTapfortapTiAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6291C1697C29300EF91B0 /* ComTapfortapTiAdView.m */; };
+		4AB629271697C29300EF91B0 /* ComTapfortapTiAdViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB6291D1697C29300EF91B0 /* ComTapfortapTiAdViewProxy.h */; };
+		4AB629281697C29300EF91B0 /* ComTapfortapTiAdViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB6291E1697C29300EF91B0 /* ComTapfortapTiAdViewProxy.m */; };
+		4AB629291697C29300EF91B0 /* ComTapfortapTiAppWallProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB6291F1697C29300EF91B0 /* ComTapfortapTiAppWallProxy.h */; };
+		4AB6292A1697C29300EF91B0 /* ComTapfortapTiAppWallProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB629201697C29300EF91B0 /* ComTapfortapTiAppWallProxy.m */; };
+		4AB6292B1697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629211697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.h */; };
+		4AB6292C1697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB629221697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.m */; };
+		4AB6292D1697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629231697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h */; };
+		4AB6292E1697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB629241697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m */; };
+		4AB629301697C34000EF91B0 /* ComTapfortapTi_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4AB6292F1697C34000EF91B0 /* ComTapfortapTi_Prefix.pch */; };
+		4AB629371697C3C300EF91B0 /* libTapForTapAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB629321697C3C300EF91B0 /* libTapForTapAds.a */; };
+		4AB629381697C3C300EF91B0 /* TapForTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629331697C3C300EF91B0 /* TapForTap.h */; };
+		4AB629391697C3C300EF91B0 /* TapForTapAdView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629341697C3C300EF91B0 /* TapForTapAdView.h */; };
+		4AB6293A1697C3C300EF91B0 /* TapForTapAppWall.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629351697C3C300EF91B0 /* TapForTapAppWall.h */; };
+		4AB6293B1697C3C300EF91B0 /* TapForTapInterstitial.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629361697C3C300EF91B0 /* TapForTapInterstitial.h */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24416B8411C4CA280047AFDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapForTapTitanium;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24DD6CF71134B3F500162E58 /* ComTapfortapTiModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiModule.h; path = Classes/ComTapfortapTiModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* ComTapfortapTiModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiModule.m; path = Classes/ComTapfortapTiModule.m; sourceTree = "<group>"; };
+		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		24DE9E0F11C5FE74003F90F6 /* ComTapfortapTiModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiModuleAssets.h; path = Classes/ComTapfortapTiModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* ComTapfortapTiModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiModuleAssets.m; path = Classes/ComTapfortapTiModuleAssets.m; sourceTree = "<group>"; };
+		4AB6291B1697C29300EF91B0 /* ComTapfortapTiAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiAdView.h; path = Classes/TapForTapProxies/ComTapfortapTiAdView.h; sourceTree = "<group>"; };
+		4AB6291C1697C29300EF91B0 /* ComTapfortapTiAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiAdView.m; path = Classes/TapForTapProxies/ComTapfortapTiAdView.m; sourceTree = "<group>"; };
+		4AB6291D1697C29300EF91B0 /* ComTapfortapTiAdViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiAdViewProxy.h; path = Classes/TapForTapProxies/ComTapfortapTiAdViewProxy.h; sourceTree = "<group>"; };
+		4AB6291E1697C29300EF91B0 /* ComTapfortapTiAdViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiAdViewProxy.m; path = Classes/TapForTapProxies/ComTapfortapTiAdViewProxy.m; sourceTree = "<group>"; };
+		4AB6291F1697C29300EF91B0 /* ComTapfortapTiAppWallProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiAppWallProxy.h; path = Classes/TapForTapProxies/ComTapfortapTiAppWallProxy.h; sourceTree = "<group>"; };
+		4AB629201697C29300EF91B0 /* ComTapfortapTiAppWallProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiAppWallProxy.m; path = Classes/TapForTapProxies/ComTapfortapTiAppWallProxy.m; sourceTree = "<group>"; };
+		4AB629211697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiInterstitialProxy.h; path = Classes/TapForTapProxies/ComTapfortapTiInterstitialProxy.h; sourceTree = "<group>"; };
+		4AB629221697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiInterstitialProxy.m; path = Classes/TapForTapProxies/ComTapfortapTiInterstitialProxy.m; sourceTree = "<group>"; };
+		4AB629231697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiTapForTapProxy.h; path = Classes/TapForTapProxies/ComTapfortapTiTapForTapProxy.h; sourceTree = "<group>"; };
+		4AB629241697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiTapForTapProxy.m; path = Classes/TapForTapProxies/ComTapfortapTiTapForTapProxy.m; sourceTree = "<group>"; };
+		4AB6292F1697C34000EF91B0 /* ComTapfortapTi_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComTapfortapTi_Prefix.pch; sourceTree = "<group>"; };
+		4AB629321697C3C300EF91B0 /* libTapForTapAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTapAds.a; sourceTree = "<group>"; };
+		4AB629331697C3C300EF91B0 /* TapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTap.h; sourceTree = "<group>"; };
+		4AB629341697C3C300EF91B0 /* TapForTapAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAdView.h; sourceTree = "<group>"; };
+		4AB629351697C3C300EF91B0 /* TapForTapAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAppWall.h; sourceTree = "<group>"; };
+		4AB629361697C3C300EF91B0 /* TapForTapInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapInterstitial.h; sourceTree = "<group>"; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libComTapfortapTi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComTapfortapTi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				4AB629371697C3C300EF91B0 /* libTapForTapAds.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libComTapfortapTi.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* TapForTapTitanium */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = TapForTapTitanium;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4AB629311697C3C300EF91B0 /* TapForTap */,
+				4AB629191697C23E00EF91B0 /* TapForTapProxies */,
+				24DE9E0F11C5FE74003F90F6 /* ComTapfortapTiModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* ComTapfortapTiModuleAssets.m */,
+				24DD6CF71134B3F500162E58 /* ComTapfortapTiModule.h */,
+				24DD6CF81134B3F500162E58 /* ComTapfortapTiModule.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4AB6292F1697C34000EF91B0 /* ComTapfortapTi_Prefix.pch */,
+				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		4AB629191697C23E00EF91B0 /* TapForTapProxies */ = {
+			isa = PBXGroup;
+			children = (
+				4AB6291B1697C29300EF91B0 /* ComTapfortapTiAdView.h */,
+				4AB6291C1697C29300EF91B0 /* ComTapfortapTiAdView.m */,
+				4AB6291D1697C29300EF91B0 /* ComTapfortapTiAdViewProxy.h */,
+				4AB6291E1697C29300EF91B0 /* ComTapfortapTiAdViewProxy.m */,
+				4AB6291F1697C29300EF91B0 /* ComTapfortapTiAppWallProxy.h */,
+				4AB629201697C29300EF91B0 /* ComTapfortapTiAppWallProxy.m */,
+				4AB629211697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.h */,
+				4AB629221697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.m */,
+				4AB629231697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h */,
+				4AB629241697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m */,
+			);
+			name = TapForTapProxies;
+			sourceTree = "<group>";
+		};
+		4AB629311697C3C300EF91B0 /* TapForTap */ = {
+			isa = PBXGroup;
+			children = (
+				4AB629321697C3C300EF91B0 /* libTapForTapAds.a */,
+				4AB629331697C3C300EF91B0 /* TapForTap.h */,
+				4AB629341697C3C300EF91B0 /* TapForTapAdView.h */,
+				4AB629351697C3C300EF91B0 /* TapForTapAppWall.h */,
+				4AB629361697C3C300EF91B0 /* TapForTapInterstitial.h */,
+			);
+			path = TapForTap;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24DD6CF91134B3F500162E58 /* ComTapfortapTiModule.h in Headers */,
+				24DE9E1111C5FE74003F90F6 /* ComTapfortapTiModuleAssets.h in Headers */,
+				4AB629251697C29300EF91B0 /* ComTapfortapTiAdView.h in Headers */,
+				4AB629271697C29300EF91B0 /* ComTapfortapTiAdViewProxy.h in Headers */,
+				4AB629291697C29300EF91B0 /* ComTapfortapTiAppWallProxy.h in Headers */,
+				4AB6292B1697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.h in Headers */,
+				4AB6292D1697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h in Headers */,
+				4AB629301697C34000EF91B0 /* ComTapfortapTi_Prefix.pch in Headers */,
+				4AB629381697C3C300EF91B0 /* TapForTap.h in Headers */,
+				4AB629391697C3C300EF91B0 /* TapForTapAdView.h in Headers */,
+				4AB6293A1697C3C300EF91B0 /* TapForTapAppWall.h in Headers */,
+				4AB6293B1697C3C300EF91B0 /* TapForTapInterstitial.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* TapForTapTitanium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TapForTapTitanium" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapForTapTitanium;
+			productName = TapForTapTitanium;
+			productReference = D2AAC07E0554694100DB518D /* libComTapfortapTi.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TapForTapTitanium" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* TapForTapTitanium */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* TapForTapTitanium */,
+				24416B8111C4CA220047AFDD /* Build & Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24416B8011C4CA220047AFDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\n\npython \"${TITANIUM_SDK}/titanium.py\" run --dir=\"${PROJECT_DIR}\"\nexit $?\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24DD6CFA1134B3F500162E58 /* ComTapfortapTiModule.m in Sources */,
+				24DE9E1211C5FE74003F90F6 /* ComTapfortapTiModuleAssets.m in Sources */,
+				4AB629261697C29300EF91B0 /* ComTapfortapTiAdView.m in Sources */,
+				4AB629281697C29300EF91B0 /* ComTapfortapTiAdViewProxy.m in Sources */,
+				4AB6292A1697C29300EF91B0 /* ComTapfortapTiAppWallProxy.m in Sources */,
+				4AB6292C1697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.m in Sources */,
+				4AB6292E1697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* TapForTapTitanium */;
+			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/ComTapfortapTi.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComTapfortapTi_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TapForTap\"",
+				);
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComTapfortapTi;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				DSTROOT = /tmp/ComTapfortapTi.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComTapfortapTi_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TapForTap\"",
+				);
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComTapfortapTi;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/ComTapfortapTi.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComTapfortapTi_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComTapfortapTi;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				DSTROOT = /tmp/ComTapfortapTi.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComTapfortapTi_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComTapfortapTi;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		24416B8211C4CA220047AFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build & test";
+			};
+			name = Debug;
+		};
+		24416B8311C4CA220047AFDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build & test";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TapForTapTitanium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TapForTapTitanium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24416B8211C4CA220047AFDD /* Debug */,
+				24416B8311C4CA220047AFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

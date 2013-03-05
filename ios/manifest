@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+description: Official Tap for Tap Titanium Module
+author: Tap for Tap
+license: The MIT License
+copyright: Copyright (c) 2013 by Tap for Tap
+
+# these should not be edited
+name: TapForTapTitanium
+moduleid: com.tapfortap.ti
+guid: 1cb9721b-4873-4da4-9dcd-a46e128a597b
+platform: iphone
+minsdk: 3.0.0.GA

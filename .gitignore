@@ -1,0 +1,17 @@
+android/.apt_generated
+android/.settings
+android/bin
+android/build
+android/dist
+android/libs/*
+android/release
+android/.classpath
+
+
+ios/TapForTapTitanium.xcodeproj/xcuserdata*
+ios/TapForTapTitanium.xcodeproj/project.xcworkspace/xcuserdata*
+ios/release
+test-app/.settings
+
+repos*
+update_native_libraries
