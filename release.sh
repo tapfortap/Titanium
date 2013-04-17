@@ -4,7 +4,7 @@
 # http://htmlpreview.github.com/?https://github.com/tapfortap/Documentation/blob/master/License.html
 # Copyright (c) 2013 Tap for Tap 
 
-VERSION="1.0.0"
+VERSION="1.1.0"
 
 cd "$(dirname $0)"
 

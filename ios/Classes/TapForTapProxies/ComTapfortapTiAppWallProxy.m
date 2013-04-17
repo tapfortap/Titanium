@@ -6,6 +6,8 @@
 
 #import "ComTapForTapTiAppWallProxy.h"
 #import "TapForTapAppWall.h"
+#import "TiUtils.h"
+#import "TiApp.h"
 
 @implementation ComTapfortapTiAppWallProxy
 
@@ -15,8 +17,31 @@
 
 -(void) show:(id)arg {
     ENSURE_UI_THREAD_0_ARGS;
-    UIViewController *applicationViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-    [TapForTapAppWall showWithRootViewController:applicationViewController];
+    [TapForTapAppWall showWithRootViewController:[TiApp app].controller];
+    [TapForTapAppWall setDelegate:self];
+}
+
+- (void) tapForTapAppWallDidReceiveAd {
+    [self fireEvent:@"receive"];
+}
+
+- (void) tapForTapAppWallDidShow {
+    [self fireEvent:@"show"];
+}
+
+-(void) tapForTapAppWallWasDismissed {
+    [self fireEvent:@"dismiss"];
+}
+
+- (void) tapForTapAppWallFailedToDownload: (NSString *) reason {
+    [self fireEvent:@"fail" withObject:reason];
+}
+
+-(void) dealloc {
+    if([TapForTapAppWall delegate] == self) {
+        [TapForTapAppWall setDelegate:nil];
+    }
+    [super dealloc];
 }
 
 @end

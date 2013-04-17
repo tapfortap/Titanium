@@ -5,6 +5,7 @@
  */
 
 #import "TiViewProxy.h"
+ #import "ComTapfortapTiAdView.h"
 
 @interface ComTapfortapTiAdViewProxy : TiViewProxy {
 

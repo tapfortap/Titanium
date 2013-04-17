@@ -6,7 +6,8 @@
 
 #import "ComTapfortapTiInterstitialProxy.h"
 #import "TapForTap.h"
-#import <Foundation/Foundation.h>
+#import "TiUtils.h"
+#import "TiApp.h"
 
 @implementation ComTapfortapTiInterstitialProxy
 
@@ -16,10 +17,31 @@
 
 -(void) show:(id)arg {
     ENSURE_UI_THREAD_0_ARGS;
-    UIViewController *applicationViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-    NSLog(@"view controller == nil? %d ", (applicationViewController == nil));
-    [TapForTapInterstitial showWithRootViewController:applicationViewController];
+    [TapForTapInterstitial showWithRootViewController:[TiApp app].controller];
 
+}
+
+- (void) tapForInterstitialDidReceiveAd {
+    [self fireEvent:@"receive"];
+}
+
+- (void) tapForTapInterstitialDidShow {
+    [self fireEvent:@"show"];
+}
+
+-(void) tapForTapInterstitialWasDismissed {
+    [self fireEvent:@"dismiss"];
+}
+
+- (void) tapForTapInterstitialFailedToDownload: (NSString *) reason {
+    [self fireEvent:@"fail" withObject:reason];
+}
+
+-(void) dealloc {
+    if([TapForTapInterstitial delegate] == self) {
+        [TapForTapInterstitial setDelegate:nil];
+    }
+    [super dealloc];
 }
 
 @end

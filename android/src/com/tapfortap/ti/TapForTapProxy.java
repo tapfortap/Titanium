@@ -20,7 +20,7 @@ public class TapForTapProxy extends KrollProxy {
 	@Kroll.method
 	public void initializeWithApiKey(String apiKey) {
 		TapForTap.plugin = "titanium";
-        TapForTap.pluginVersion = "1.0.0";
+        TapForTap.pluginVersion = "1.1.0";
 		TapForTap.initialize(getActivity(), apiKey);
 	}
 

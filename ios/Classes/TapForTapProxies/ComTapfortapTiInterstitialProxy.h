@@ -5,8 +5,9 @@
  */
 
 #import "TiProxy.h"
+#import "TapForTapInterstitial.h"
 
-@interface ComTapfortapTiInterstitialProxy : TiProxy {
+@interface ComTapfortapTiInterstitialProxy : TiProxy<TapForTapInterstitialDelegate> {
 
 }
 

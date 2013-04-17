@@ -7,7 +7,7 @@
 #import "TiUIView.h"
 #import "TapForTapAdView.h"
 
-@interface ComTapfortapTiAdView : TiUIView {
+@interface ComTapfortapTiAdView : TiUIView<TapForTapAdViewDelegate> {
     UIView *adView;
 }
 

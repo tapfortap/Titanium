@@ -26,6 +26,15 @@ public class AppWallProxy extends KrollProxy implements AppWallListener {
 		AppWall.setListener(this);
 	}
 
+	public void onReceiveAd() {
+		fireEvent("receive", null);
+	}
+
+	@Override
+	public void onShow() {
+		fireEvent("show", null);
+	}
+
 	@Override
 	public void onDismiss() {
 		fireEvent("dismiss", null);

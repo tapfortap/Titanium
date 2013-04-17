@@ -41,16 +41,12 @@ if (Ti.version < 1.8 ) {
 	var window = new Window();
 	window.open();
 	
-	// Get the titanium module
 	var tftModule = require('com.tapfortap.ti');
     Ti.API.info("module is => " + tftModule);
 
-    // Create the Tap for Tap prozy class
 	var tft = tftModule.createTapForTap();
-	// Initialize with Tap for Tap
-	tft.initializeWithApiKey("acb9e550dda1679b29401d26edb4f23b")
+	tft.initializeWithApiKey("YOUT API KEY")
  
-    // Create a Tap for Tap AdView
 	var adView = tftModule.createAdView({
 		width: 320,
 		height: 50,
@@ -58,21 +54,22 @@ if (Ti.version < 1.8 ) {
 		left: 0
 	});
 	
-	// Subscribe to the Tap for Tap AdView events
+	Ti.API.info("adView is => " + adView);
+	
 	adView.addEventListener("tap", function(d) {
 		Ti.API.info("Banner was tapped");
 	});
-	
+
 	adView.addEventListener("receive", function(d) {
 		Ti.API.info("Banner was received");
 	});
-	
+
 	adView.addEventListener("error", function(d) {
 		Ti.API.info("Failed to receive banner because ", JSON.stringify(d, null, 2));
 	});
 	
 	window.add(adView);
-	
+
 	var showAppWallButton = Ti.UI.createButton({
     	title:"Show AppWall",
     	top:80 + 50,
@@ -81,35 +78,54 @@ if (Ti.version < 1.8 ) {
 	});
 
 	showAppWallButton.addEventListener("click",function(){
-		// Create an app wall
 	    var appWall = tftModule.createAppWall();
-	    // Subscribe to the app wall dismiss event
+		appWall.addEventListener("receive", function(d) {
+			Ti.API.info("AppWall received");
+		});
+
+		appWall.addEventListener("show", function(d) {
+			Ti.API.info("AppWall shown");
+		});
+
 		appWall.addEventListener("dismiss", function(d) {
 			Ti.API.info("AppWall dismissed");
 		});
-		// Show the app wall
+
+		appWall.addEventListener("fail", function(d) {
+			Ti.API.info("AppWall failed because: ", JSON.stringify(d, null, 2));
+		});
 		appWall.show();
 	});
 	window.add(showAppWallButton);
-	
+
 	var showInterstitialButton = Ti.UI.createButton({
     	title:"Show Interstitial",
-    	top:80 + 50 + 50 + 10,
+    	top:200,
     	height: 50,
     	width: 300
 	});
 
 	showInterstitialButton.addEventListener("click",function(){
-		// Create an interstitial
 		var interstitial = tftModule.createInterstitial();
-		// Subscribe to the interstital dismiss event
+		interstitial.addEventListener("receive", function(d) {
+			Ti.API.info("Interstitial received");
+		});
+
+		interstitial.addEventListener("show", function(d) {
+			Ti.API.info("Interstitial shown");
+		});
+
 		interstitial.addEventListener("dismiss", function(d) {
 			Ti.API.info("Interstitial dismissed");
 		});
-		// Show the app wall
+
+		interstitial.addEventListener("fail", function(d) {
+			Ti.API.info("Interstitial dismissed failed because: ", JSON.stringify(d, null, 2));
+		});
 		interstitial.show();
 	});
 	window.add(showInterstitialButton);
+
 
 })();
 
