@@ -18,10 +18,10 @@
 -(void) show:(id)arg {
     ENSURE_UI_THREAD_0_ARGS;
     [TapForTapInterstitial showWithRootViewController:[TiApp app].controller];
-
+    [TapForTapInterstitial setDelegate:self];
 }
 
-- (void) tapForInterstitialDidReceiveAd {
+- (void) tapForTapInterstitialDidReceiveAd {
     [self fireEvent:@"receive"];
 }
 

@@ -77,7 +77,6 @@ if (Ti.version < 1.8 ) {
     	width: 300
 	});
 
-	showAppWallButton.addEventListener("click",function(){
 	    var appWall = tftModule.createAppWall();
 		appWall.addEventListener("receive", function(d) {
 			Ti.API.info("AppWall received");
@@ -94,6 +93,8 @@ if (Ti.version < 1.8 ) {
 		appWall.addEventListener("fail", function(d) {
 			Ti.API.info("AppWall failed because: ", JSON.stringify(d, null, 2));
 		});
+
+	showAppWallButton.addEventListener("click",function(){
 		appWall.show();
 	});
 	window.add(showAppWallButton);
@@ -105,7 +106,6 @@ if (Ti.version < 1.8 ) {
     	width: 300
 	});
 
-	showInterstitialButton.addEventListener("click",function(){
 		var interstitial = tftModule.createInterstitial();
 		interstitial.addEventListener("receive", function(d) {
 			Ti.API.info("Interstitial received");
@@ -122,6 +122,8 @@ if (Ti.version < 1.8 ) {
 		interstitial.addEventListener("fail", function(d) {
 			Ti.API.info("Interstitial dismissed failed because: ", JSON.stringify(d, null, 2));
 		});
+
+	showInterstitialButton.addEventListener("click",function(){
 		interstitial.show();
 	});
 	window.add(showInterstitialButton);
