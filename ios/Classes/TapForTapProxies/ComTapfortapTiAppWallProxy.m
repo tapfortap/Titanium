@@ -5,42 +5,60 @@
  */
 
 #import "ComTapForTapTiAppWallProxy.h"
-#import "TapForTapAppWall.h"
+#import "TFTAppWall.h"
 #import "TiUtils.h"
 #import "TiApp.h"
 
+@interface ComTapfortapTiAppWallProxy()
+@property (nonatomic, retain) TFTAppWall *appWall;
+@end
+
 @implementation ComTapfortapTiAppWallProxy
 
--(void) prepare:(id)arg {
-    [TapForTapAppWall prepare];
+- (TFTAppWall *)appWall {
+    NSLog(@"getting appWall");
+    if (_appWall == nil) {
+        NSLog(@"creating appWall");
+        _appWall = [[TFTAppWall appWallWithDelegate:self] retain];
+    }
+    return _appWall;
 }
 
--(void) show:(id)arg {
+- (void)prepare:(id)arg {
     ENSURE_UI_THREAD_0_ARGS;
-    [TapForTapAppWall showWithRootViewController:[TiApp app].controller];
-    [TapForTapAppWall setDelegate:self];
+    NSLog(@"preparing appWall");
+    [self.appWall load];
 }
 
-- (void) tapForTapAppWallDidReceiveAd {
+- (void)show:(id)arg {
+    ENSURE_UI_THREAD_0_ARGS;
+    NSLog(@"showing appWall");
+    [self.appWall showAndLoadWithViewController:[TiApp app].controller];
+}
+
+- (void)tftAppWallDidReceiveAd:(TFTAppWall *)appWall {
     [self fireEvent:@"receive"];
 }
 
-- (void) tapForTapAppWallDidShow {
-    [self fireEvent:@"show"];
-}
-
--(void) tapForTapAppWallWasDismissed {
-    [self fireEvent:@"dismiss"];
-}
-
-- (void) tapForTapAppWallFailedToDownload: (NSString *) reason {
+- (void)tftAppWall:(TFTAppWall *)appWall didFail:(NSString *)reason {
     [self fireEvent:@"fail" withObject:reason];
 }
 
+- (void)tftAppWallDidShow:(TFTAppWall *)appWall {
+    [self fireEvent:@"show"];
+}
+
+- (void)tftAppWallWasTapped:(TFTAppWall *)appWall {
+    [self fireEvent:@"tap"];
+}
+
+- (void)tftAppWallWasDismissed:(TFTAppWall *)appWall {
+    [self fireEvent:@"dismiss"];
+}
+
 -(void) dealloc {
-    if([TapForTapAppWall delegate] == self) {
-        [TapForTapAppWall setDelegate:nil];
-    }
+    [_appWall release];
+    _appWall = nil;
     [super dealloc];
 }
 

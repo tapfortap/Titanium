@@ -9,6 +9,9 @@
 @implementation ComTapfortapTiAdView
 
 -(void) dealloc {
+    if(adView != nil) {
+        [adView performSelector: @selector(setDelegate:) withObject:nil];
+    }
     RELEASE_TO_NIL(adView);
     [super dealloc];
 }
@@ -17,9 +20,9 @@
     [adView setDelegate:nil];
     [adView release];
     adView = nil;
-    
+
     if (adView == nil) {
-        adView = [[TapForTapAdView alloc] initWithFrame:[self frame] delegate:self];
+        adView = [TFTBanner bannerWithFrame:[self frame] delegate:self];
         [self addSubview:adView];
     }
     return adView;
@@ -32,16 +35,16 @@
     }
 }
 
-- (void) tapForTapAdViewDidReceiveAd: (TapForTapAdView *)adView {
+- (void) tftBannerDidReceiveAd: (TFTBanner *)banner {
     [self.proxy fireEvent:@"receive"];
 }
 
-- (void) tapForTapAdView: (TapForTapAdView *)adView didFailToReceiveAd: (NSString *)reason {
+- (void) tftBanner: (TFTBanner *)banner didFail:(NSString *)reason {
     [self.proxy fireEvent:@"error" withObject:reason];
 
 }
 
-- (void) tapForTapAdViewWasTapped: (TapForTapAdView *)adView {
+- (void) tftBannerWasTapped:(TFTBanner *)banner {
     [self.proxy fireEvent:@"tap"];
 }
 

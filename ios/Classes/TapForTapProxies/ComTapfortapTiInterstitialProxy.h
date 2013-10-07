@@ -5,10 +5,8 @@
  */
 
 #import "TiProxy.h"
-#import "TapForTapInterstitial.h"
+#import "TFTInterstitial.h"
 
-@interface ComTapfortapTiInterstitialProxy : TiProxy<TapForTapInterstitialDelegate> {
-
-}
+@interface ComTapfortapTiInterstitialProxy : TiProxy<TFTInterstitialDelegate>
 
 @end

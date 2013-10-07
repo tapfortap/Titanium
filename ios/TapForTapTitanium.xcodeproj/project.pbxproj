@@ -37,11 +37,11 @@
 		4AB6292D1697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629231697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h */; };
 		4AB6292E1697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB629241697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m */; };
 		4AB629301697C34000EF91B0 /* ComTapfortapTi_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4AB6292F1697C34000EF91B0 /* ComTapfortapTi_Prefix.pch */; };
-		4AB629371697C3C300EF91B0 /* libTapForTapAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB629321697C3C300EF91B0 /* libTapForTapAds.a */; };
-		4AB629381697C3C300EF91B0 /* TapForTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629331697C3C300EF91B0 /* TapForTap.h */; };
-		4AB629391697C3C300EF91B0 /* TapForTapAdView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629341697C3C300EF91B0 /* TapForTapAdView.h */; };
-		4AB6293A1697C3C300EF91B0 /* TapForTapAppWall.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629351697C3C300EF91B0 /* TapForTapAppWall.h */; };
-		4AB6293B1697C3C300EF91B0 /* TapForTapInterstitial.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AB629361697C3C300EF91B0 /* TapForTapInterstitial.h */; };
+		4AFBA6D117FE0CBC00C903ED /* libTapForTap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFBA6CC17FE0CBC00C903ED /* libTapForTap.a */; };
+		4AFBA6D217FE0CBC00C903ED /* TFTAppWall.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AFBA6CD17FE0CBC00C903ED /* TFTAppWall.h */; };
+		4AFBA6D317FE0CBC00C903ED /* TFTBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AFBA6CE17FE0CBC00C903ED /* TFTBanner.h */; };
+		4AFBA6D417FE0CBC00C903ED /* TFTInterstitial.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AFBA6CF17FE0CBC00C903ED /* TFTInterstitial.h */; };
+		4AFBA6D517FE0CBC00C903ED /* TFTTapForTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AFBA6D017FE0CBC00C903ED /* TFTTapForTap.h */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,11 +72,11 @@
 		4AB629231697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComTapfortapTiTapForTapProxy.h; path = Classes/TapForTapProxies/ComTapfortapTiTapForTapProxy.h; sourceTree = "<group>"; };
 		4AB629241697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComTapfortapTiTapForTapProxy.m; path = Classes/TapForTapProxies/ComTapfortapTiTapForTapProxy.m; sourceTree = "<group>"; };
 		4AB6292F1697C34000EF91B0 /* ComTapfortapTi_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComTapfortapTi_Prefix.pch; sourceTree = "<group>"; };
-		4AB629321697C3C300EF91B0 /* libTapForTapAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTapAds.a; sourceTree = "<group>"; };
-		4AB629331697C3C300EF91B0 /* TapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTap.h; sourceTree = "<group>"; };
-		4AB629341697C3C300EF91B0 /* TapForTapAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAdView.h; sourceTree = "<group>"; };
-		4AB629351697C3C300EF91B0 /* TapForTapAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAppWall.h; sourceTree = "<group>"; };
-		4AB629361697C3C300EF91B0 /* TapForTapInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapInterstitial.h; sourceTree = "<group>"; };
+		4AFBA6CC17FE0CBC00C903ED /* libTapForTap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTap.a; sourceTree = "<group>"; };
+		4AFBA6CD17FE0CBC00C903ED /* TFTAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTAppWall.h; sourceTree = "<group>"; };
+		4AFBA6CE17FE0CBC00C903ED /* TFTBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTBanner.h; sourceTree = "<group>"; };
+		4AFBA6CF17FE0CBC00C903ED /* TFTInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTInterstitial.h; sourceTree = "<group>"; };
+		4AFBA6D017FE0CBC00C903ED /* TFTTapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTTapForTap.h; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComTapfortapTi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComTapfortapTi.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,7 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				4AB629371697C3C300EF91B0 /* libTapForTapAds.a in Frameworks */,
+				4AFBA6D117FE0CBC00C903ED /* libTapForTap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,11 +163,11 @@
 		4AB629311697C3C300EF91B0 /* TapForTap */ = {
 			isa = PBXGroup;
 			children = (
-				4AB629321697C3C300EF91B0 /* libTapForTapAds.a */,
-				4AB629331697C3C300EF91B0 /* TapForTap.h */,
-				4AB629341697C3C300EF91B0 /* TapForTapAdView.h */,
-				4AB629351697C3C300EF91B0 /* TapForTapAppWall.h */,
-				4AB629361697C3C300EF91B0 /* TapForTapInterstitial.h */,
+				4AFBA6CC17FE0CBC00C903ED /* libTapForTap.a */,
+				4AFBA6CD17FE0CBC00C903ED /* TFTAppWall.h */,
+				4AFBA6CE17FE0CBC00C903ED /* TFTBanner.h */,
+				4AFBA6CF17FE0CBC00C903ED /* TFTInterstitial.h */,
+				4AFBA6D017FE0CBC00C903ED /* TFTTapForTap.h */,
 			);
 			path = TapForTap;
 			sourceTree = "<group>";
@@ -179,18 +179,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFBA6D217FE0CBC00C903ED /* TFTAppWall.h in Headers */,
 				24DD6CF91134B3F500162E58 /* ComTapfortapTiModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComTapfortapTiModuleAssets.h in Headers */,
+				4AFBA6D317FE0CBC00C903ED /* TFTBanner.h in Headers */,
 				4AB629251697C29300EF91B0 /* ComTapfortapTiAdView.h in Headers */,
+				4AFBA6D417FE0CBC00C903ED /* TFTInterstitial.h in Headers */,
 				4AB629271697C29300EF91B0 /* ComTapfortapTiAdViewProxy.h in Headers */,
 				4AB629291697C29300EF91B0 /* ComTapfortapTiAppWallProxy.h in Headers */,
 				4AB6292B1697C29300EF91B0 /* ComTapfortapTiInterstitialProxy.h in Headers */,
 				4AB6292D1697C29300EF91B0 /* ComTapfortapTiTapForTapProxy.h in Headers */,
 				4AB629301697C34000EF91B0 /* ComTapfortapTi_Prefix.pch in Headers */,
-				4AB629381697C3C300EF91B0 /* TapForTap.h in Headers */,
-				4AB629391697C3C300EF91B0 /* TapForTapAdView.h in Headers */,
-				4AB6293A1697C3C300EF91B0 /* TapForTapAppWall.h in Headers */,
-				4AB6293B1697C3C300EF91B0 /* TapForTapInterstitial.h in Headers */,
+				4AFBA6D517FE0CBC00C903ED /* TFTTapForTap.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +219,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TapForTapTitanium" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -314,9 +316,11 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TapForTap\"",
+					"\\\"$(SRCROOT)/TapForTap\\\"",
+					"/Users/phil/Dropbox/tapfortap-phil/Titanium/ios/TapForTap",
 				);
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -363,10 +367,11 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TapForTap\"",
+					"\\\"$(SRCROOT)/TapForTap\\\"",
+					"/Users/phil/Dropbox/tapfortap-phil/Titanium/ios/TapForTap",
 				);
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";

@@ -5,42 +5,56 @@
  */
 
 #import "ComTapfortapTiInterstitialProxy.h"
-#import "TapForTap.h"
+#import "TFTTapForTap.h"
 #import "TiUtils.h"
 #import "TiApp.h"
 
+@interface ComTapfortapTiInterstitialProxy()
+@property (nonatomic, retain) TFTInterstitial *interstitial;
+@end
+
 @implementation ComTapfortapTiInterstitialProxy
 
+- (TFTInterstitial *)interstitial {
+    if (_interstitial == nil) {
+        _interstitial = [[TFTInterstitial interstitialWithDelegate:self] retain];
+    }
+    return _interstitial;
+}
+
 -(void) prepare:(id)arg {
-    [TapForTapInterstitial prepare];
+    ENSURE_UI_THREAD_0_ARGS;
+    [self.interstitial load];
 }
 
 -(void) show:(id)arg {
     ENSURE_UI_THREAD_0_ARGS;
-    [TapForTapInterstitial showWithRootViewController:[TiApp app].controller];
-    [TapForTapInterstitial setDelegate:self];
+    [self.interstitial showAndLoadWithViewController:[TiApp app].controller];
 }
 
-- (void) tapForTapInterstitialDidReceiveAd {
+- (void)tftInterstitialDidReceiveAd:(TFTInterstitial *)interstitial {
     [self fireEvent:@"receive"];
 }
 
-- (void) tapForTapInterstitialDidShow {
-    [self fireEvent:@"show"];
-}
-
--(void) tapForTapInterstitialWasDismissed {
-    [self fireEvent:@"dismiss"];
-}
-
-- (void) tapForTapInterstitialFailedToDownload: (NSString *) reason {
+- (void)tftInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason {
     [self fireEvent:@"fail" withObject:reason];
 }
 
+- (void)tftInterstitialDidShow:(TFTInterstitial *)interstitial {
+    [self fireEvent:@"show"];
+}
+
+- (void)tftInterstitialWasTapped:(TFTInterstitial *)interstitial {
+    [self fireEvent:@"tap"];
+}
+
+- (void)tftInterstitialWasDismissed:(TFTInterstitial *)interstitial {
+    [self fireEvent:@"dismiss"];
+}
+
 -(void) dealloc {
-    if([TapForTapInterstitial delegate] == self) {
-        [TapForTapInterstitial setDelegate:nil];
-    }
+    [_interstitial release];
+    _interstitial = nil;
     [super dealloc];
 }
 

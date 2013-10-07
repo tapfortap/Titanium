@@ -5,10 +5,8 @@
  */
 
 #import "TiProxy.h"
-#import "TapForTapAppWall.h"
+#import "TFTAppWall.h"
 
-@interface ComTapfortapTiAppWallProxy : TiProxy<TapForTapAppWallDelegate> {
-
-}
+@interface ComTapfortapTiAppWallProxy : TiProxy<TFTAppWallDelegate>
 
 @end

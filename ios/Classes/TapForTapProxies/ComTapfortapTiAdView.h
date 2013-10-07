@@ -5,9 +5,9 @@
  */
 
 #import "TiUIView.h"
-#import "TapForTapAdView.h"
+#import "TFTBanner.h"
 
-@interface ComTapfortapTiAdView : TiUIView<TapForTapAdViewDelegate> {
+@interface ComTapfortapTiAdView : TiUIView<TFTBannerDelegate> {
     UIView *adView;
 }
 

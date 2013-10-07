@@ -5,7 +5,7 @@
  */
 
 #import "ComTapfortapTiTapForTapProxy.h"
-#import "TapForTap.h"
+#import "TFTTapForTap.h"
 #import "TiUtils.h"
 
 @implementation ComTapfortapTiTapForTapProxy
@@ -14,30 +14,30 @@
     ENSURE_UI_THREAD_1_ARG(args);
     ENSURE_SINGLE_ARG(args, NSString);
     NSString* apiKey = [TiUtils stringValue:args];
-    [TapForTap performSelector: @selector(_setPlugin:) withObject: @"titanium"];
-    [TapForTap performSelector: @selector(_setPluginVersion:) withObject: @"1.1.0"];
-    [TapForTap initializeWithAPIKey: apiKey];
+    [TFTTapForTap performSelector: @selector(setPlugin:) withObject: @"titanium"];
+    [TFTTapForTap performSelector: @selector(setPluginVersion:) withObject: @"1.2.0"];
+    [TFTTapForTap initializeWithAPIKey: apiKey];
 }
 
 -(void) setEnvironment:(id)args {
     ENSURE_SINGLE_ARG(args, NSString);
     NSString* environment = [TiUtils stringValue:args];
-    [TapForTap performSelector:@selector(_setEnvironment:) withObject: environment];
+    [TFTTapForTap performSelector:@selector(_setEnvironment:) withObject: environment];
 }
 
 -(void) setYearOfBirth:(id)args {
     NSUInteger yearOfBirth = [TiUtils intValue:args];
-    [TapForTap setYearOfBirth:yearOfBirth];
+    [TFTTapForTap setYearOfBirth:yearOfBirth];
 }
 
 -(void) setGender:(id)args {
     NSUInteger gender = [TiUtils intValue:args];
     if(gender == MALE) {
-        [TapForTap setGender:MALE];
+        [TFTTapForTap setGender:MALE];
     } else if(gender == FEMALE){
-        [TapForTap setGender:FEMALE];
+        [TFTTapForTap setGender:FEMALE];
     } else {
-        [TapForTap setGender:NONE];
+        [TFTTapForTap setGender:NONE];
     }
 }
 
@@ -46,7 +46,7 @@
     CLLocationDegrees longitude =[TiUtils doubleValue:[args objectAtIndex:1]];
     
     CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
-    [TapForTap setLocation:location];
+    [TFTTapForTap setLocation:location];
     
     [location release];
 }
@@ -54,7 +54,7 @@
 -(void) setUserAccountId:(id)args {
     ENSURE_SINGLE_ARG(args, NSString);
     NSString* userAccountId = [TiUtils stringValue:args];
-    [TapForTap setUserAccountID: userAccountId];
+    [TFTTapForTap setUserAccountId: userAccountId];
 }
 
 @end
