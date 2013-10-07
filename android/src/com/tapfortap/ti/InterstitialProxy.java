@@ -14,16 +14,24 @@ import com.tapfortap.Interstitial.InterstitialListener;
 
 @Kroll.proxy(creatableInModule = TapForTapTitaniumModule.class)
 public class InterstitialProxy extends KrollProxy implements InterstitialListener {
-
+	private Interstitial interstitial;
+	
+	private Interstitial getInterstitial() {
+		if (interstitial == null) {
+			interstitial = Interstitial.create(getActivity(), this);
+		}
+		return interstitial;
+	}
+	
+	
 	@Kroll.method
 	public void prepare() {
-		Interstitial.prepare(getActivity());
+		getInterstitial().load();
 	}
 
 	@Kroll.method
 	public void show() {
-		Interstitial.show(getActivity());
-		Interstitial.setListener(this);
+		getInterstitial().showAndLoad();
 	}
 
 	public void onReceiveAd() {
@@ -31,18 +39,27 @@ public class InterstitialProxy extends KrollProxy implements InterstitialListene
 	}
 
 	@Override
-	public void onShow() {
+	public void interstitialOnReceive(Interstitial interstitial) {
+		fireEvent("receive", null);
+	}
+	
+	@Override
+	public void interstitialOnFail(Interstitial interstitial, String reason, Throwable throwable) {
+		fireEvent("fail", reason);
+	}
+
+	@Override
+	public void interstitialOnShow(Interstitial interstitial) {
 		fireEvent("show", null);
 	}
 
 	@Override
-	public void onDismiss() {
+	public void interstitialOnTap(Interstitial interstitial) {
+		fireEvent("tap", null);
+	}
+	
+	@Override
+	public void interstitialOnDismiss(Interstitial interstitial) {
 		fireEvent("dismiss", null);
 	}
-
-	@Override
-	public void onFail(String reason) {
-		fireEvent("fail", reason);
-	}
-
 }

@@ -14,35 +14,47 @@ import com.tapfortap.AppWall.AppWallListener;
 
 @Kroll.proxy(creatableInModule = TapForTapTitaniumModule.class)
 public class AppWallProxy extends KrollProxy implements AppWallListener {
-
+	private AppWall appWall;
+	
+	private AppWall getAppWall() {
+		if (appWall == null) {
+			appWall = AppWall.create(getActivity(), this);
+		}
+		return appWall;
+	}
+	
 	@Kroll.method
 	public void prepare() {
-		AppWall.prepare(getActivity());
+		getAppWall().load();
 	}
 
 	@Kroll.method
 	public void show() {
-		AppWall.show(getActivity());
-		AppWall.setListener(this);
-	}
-
-	public void onReceiveAd() {
-		fireEvent("receive", null);
+		getAppWall().showAndLoad();
 	}
 
 	@Override
-	public void onShow() {
+	public void appWallOnReceive(AppWall appWall) {
+		fireEvent("receive", null);
+	}
+	
+	@Override
+	public void appWallOnFail(AppWall appWall, String reason, Throwable throwable) {
+		fireEvent("fail", reason);
+	}
+
+	@Override
+	public void appWallOnShow(AppWall appWall) {
 		fireEvent("show", null);
 	}
 
 	@Override
-	public void onDismiss() {
+	public void appWallOnTap(AppWall appWall) {
+		fireEvent("tap", null);
+	}
+	
+	@Override
+	public void appWallOnDismiss(AppWall appWall) {
 		fireEvent("dismiss", null);
 	}
-
-	@Override
-	public void onFail(String reason) {
-		fireEvent("fail", reason);
-	}
-
 }

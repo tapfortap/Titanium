@@ -9,32 +9,33 @@ package com.tapfortap.ti;
 import org.appcelerator.titanium.proxy.TiViewProxy;
 import org.appcelerator.titanium.view.TiUIView;
 
-import com.tapfortap.AdView.AdViewListener;
+import com.tapfortap.Banner;
+import com.tapfortap.Banner.BannerListener;
 
-public class AdView extends TiUIView implements AdViewListener {
+public class AdView extends TiUIView implements BannerListener {
 	public AdView(TiViewProxy proxy) {
 		super(proxy);
 		createAdView();
 	}
 
 	public void createAdView() {
-		com.tapfortap.AdView adView = new com.tapfortap.AdView(proxy.getActivity());
-		adView.setListener(this);
-		setNativeView(adView);
+		Banner banner = Banner.create(proxy.getActivity());
+		banner.setListener(this);
+		setNativeView(banner);
+	}
+
+	@Override
+	public void bannerOnReceive(Banner banner) {
+		proxy.fireEvent("receive", null);
 	}
 	
 	@Override
-	public void onTapAd() {
-		proxy.fireEvent("tap", null);
-	}
-
-	@Override
-	public void onReceiveAd() {
-		proxy.fireEvent("receive", null);
-	}
-
-	@Override
-	public void onFailToReceiveAd(String reason) {
+	public void bannerOnFail(Banner banner, String reason, Throwable throwable) {
 		proxy.fireEvent("error", reason);
+	}
+
+	@Override
+	public void bannerOnTap(Banner banner) {
+		proxy.fireEvent("tap", null);
 	}
 }
