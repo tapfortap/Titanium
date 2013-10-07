@@ -8,10 +8,12 @@ android/release
 android/.classpath
 
 
+*.xccheckout
 ios/TapForTapTitanium.xcodeproj/xcuserdata*
 ios/TapForTapTitanium.xcodeproj/project.xcworkspace/xcuserdata*
 ios/release
 test-app/.settings
 
 repos*
-update_native_libraries
+update_native_libraries*
+TapforTap-Titanium-Documentation.zip
