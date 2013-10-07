@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.tapfortap.titaniumtestapp</id>
+    <id>com.tapfortap.ti.testapp</id>
     <name>test-app</name>
     <version>1.0</version>
-    <publisher>phil</publisher>
+    <publisher>tapfortap</publisher>
     <url>http://tapfortap.com</url>
-    <description>not specified</description>
-    <copyright>2013 by phil</copyright>
+    <description>The Tap for Tap Titanium test application</description>
+    <copyright>2013 by Tap for Tap</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
@@ -14,8 +14,8 @@
     <statusbar-hidden>false</statusbar-hidden>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
-    <analytics>true</analytics>
-    <guid>4b47dfe6-0da2-4c22-8f5e-4f465871fb4e</guid>
+    <analytics>false</analytics>
+    <guid>d6429fb1-1a79-452a-9fde-95c267b030b7</guid>
     <property name="ti.ui.defaultunit" type="string">system</property>
     <iphone>
         <orientations device="iphone">
@@ -38,10 +38,11 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="android">com.tapfortap.ti</module>
-        <module platform="iphone">com.tapfortap.ti</module>
+        <module platform="android" version="1.2.0">com.tapfortap.ti</module>
+        <module platform="iphone" version="1.2.0">com.tapfortap.ti</module>
     </modules>
     <deployment-targets>
+        <target device="tizen">false</target>
         <target device="blackberry">false</target>
         <target device="android">true</target>
         <target device="ipad">true</target>
