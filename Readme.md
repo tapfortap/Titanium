@@ -10,13 +10,15 @@ Set the following environment variables:
 ### For Android
 - ANDROID_SDK="PATH TO ANDROID SDK" (ie. /usr/local/android/) 
 - ANDROID_TARGET="ANDROID TARGET SDK" (ie. 17)
-- ANDROID_NDK="PATH TO ADNDROID NDK" (ie /usr/local/android/ndk/)
+- ANDROID_NDK="PATH TO ADNDROID NDK" (ie. /usr/local/android/ndk/)
 
 ### For iOS
-- IOS_TARGET="IPHONE TARGET SDK" (ie iphoneos6.1)
+- IOS_TARGET="IPHONE TARGET SDK" (ie. iphoneos6.1)
 
 ### For Titanium
-export TITANIUM_SDK="/Users/phil/Library/Application Support/Titanium/"
+export TITANIUM_SDK="PATH TO TITANIUM SDK" (ie. /Users/username/Library/Application Support/Titanium/)
+
+Run release.sh
 
 1.2.0 / 2013-03-05
 ==================
