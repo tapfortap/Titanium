@@ -5,7 +5,10 @@ For more information about Tap for Tap visit [http://www.tapfortap.com](http://w
 For documentation on how to use the Titanium plugin visit the [Tap for Tap documentation portal](http://tapfortap.com/documentation/Titanium).
 
 # Build Instructions 
-Set the following environment variables:
+
+1. Install Titanium SDK
+
+2. Set the following environment variables:
 
 ### For Android
 - ANDROID_SDK="PATH TO ANDROID SDK" (ie. /usr/local/android/) 
@@ -18,7 +21,7 @@ Set the following environment variables:
 ### For Titanium
 export TITANIUM_SDK="PATH TO TITANIUM SDK" (ie. /Users/username/Library/Application Support/Titanium/)
 
-Run release.sh
+3. Run release.sh
 
 1.2.0 / 2013-03-05
 ==================
