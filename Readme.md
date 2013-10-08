@@ -7,20 +7,15 @@ For documentation on how to use the Titanium plugin visit the [Tap for Tap docum
 # Build Instructions 
 
 1. Install Titanium SDK
-
 2. Set the following environment variables:
-
-### For Android
-- ANDROID_SDK="PATH TO ANDROID SDK" (ie. /usr/local/android/) 
-- ANDROID_TARGET="ANDROID TARGET SDK" (ie. 17)
-- ANDROID_NDK="PATH TO ADNDROID NDK" (ie. /usr/local/android/ndk/)
-
-### For iOS
-- IOS_TARGET="IPHONE TARGET SDK" (ie. iphoneos6.1)
-
-### For Titanium
-export TITANIUM_SDK="PATH TO TITANIUM SDK" (ie. /Users/username/Library/Application Support/Titanium/)
-
+  - For Android
+      - `ANDROID_SDK="PATH TO ANDROID SDK"` (ie. `/usr/local/android/`) 
+      - `ANDROID_TARGET="ANDROID TARGET SDK"` (ie. `17`)
+      - `ANDROID_NDK="PATH TO ADNDROID NDK"` (ie. `/usr/local/android/ndk/`)
+  - For iOS
+      - `IOS_TARGET="IPHONE TARGET SDK"` (ie. `iphoneos6.1`)
+  - For Titanium
+      - `TITANIUM_SDK="PATH TO TITANIUM SDK"` (ie. `/Users/username/Library/Application Support/Titanium/`)
 3. Run release.sh
 
 1.2.0 / 2013-03-05
